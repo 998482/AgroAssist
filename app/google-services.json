@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1028932771073",
+    "project_id": "agroinnovexa2-0",
+    "storage_bucket": "agroinnovexa2-0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028932771073:android:9487148779cc940d920f00",
+        "android_client_info": {
+          "package_name": "com.example.agroinnovexa20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDbyr4-2DlInyBt5gYwFyVFxCzAx8Iq8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

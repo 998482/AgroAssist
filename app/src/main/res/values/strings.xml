@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AgroInnovexa2.0</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_continue">Log in to continue</string>
+    <string name="email">Email</string>
+    <string name="password_hint">Password (6 digits)</string>
+    <string name="login">Login</string>
+    <string name="signup_prompt">Do not have an account as SignUp?</string>
+    <string name="login_success">Login Successful!</string>
+    <string name="login_failed">Login Failed</string>
+
+
+    <string name="create_account">Create Account</string>
+    <string name="signup_info">Get started by filling out the form</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup">Sign Up</string>
+    <string name="already_account">Already have an account Login</string>
+    <string name="signup_success">Signup Successful Profile created</string>
+
+        <string name="hillside_weather_forecast">Hillside Weather Forecast</string>
+        <string name="profile">Profile</string>
+        <string name="farm_dashboard">Farm Dashboard</string>
+        <string name="farm_hyperlocal_weather">Your farms hyperlocal weather at a glance.</string>
+        <string name="microclimate_prediction">Microclimate Prediction</string>
+        <string name="ai_forecast">AI-powered forecast for your specific hillside location</string>
+        <string name="location">Location</string>
+        <string name="location_placeholder">e.g., 40.71° N, 74.00° W</string>
+        <string name="crop_type">Crop Type</string>
+        <string name="crop_placeholder">grapes</string>
+        <string name="get_forecast">✦ Get Forecast</string>
+        <string name="live_data">Live Data</string>
+        <string name="temperature">Temperature</string>
+        <string name="humidity">Humidity</string>
+        <string name="up_to_minute_reading">Up-to-minute reading</string>
+        <string name="wind">Wind</string>
+        <string name="current_weather">Current Weather</string>
+
+
+
+
+
+
+
+</resources>

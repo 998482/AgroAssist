@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">एग्रोइननोवेक्सा 2.0</string>
+    <string name="welcome_back">स्वागत है!</string>
+    <string name="login_continue">जारी रखने के लिए लॉगिन करें</string>
+    <string name="email">ईमेल</string>
+    <string name="password_hint">पासवर्ड (6 अंक)</string>
+    <string name="login">लॉगिन</string>
+    <string name="signup_prompt">खाता नहीं है? साइन अप करें</string>
+    <string name="login_success">लॉगिन सफल!</string>
+    <string name="login_failed">लॉगिन विफल</string>
+    <string name="create_account">खाता बनाएं</string>
+    <string name="signup_info">फॉर्म भरकर शुरू करें</string>
+
+
+    <string name="confirm_password">पासवर्ड पुष्टि करें</string>
+    <string name="signup">साइन अप करें</string>
+    <string name="already_account">पहले से खाता है? लॉगिन करें</string>
+    <string name="signup_success">साइनअप सफल प्रोफ़ाइल बन गई।</string>
+
+        <string name="hillside_weather_forecast">हिलसाइड मौसम पूर्वानुमान</string>
+        <string name="profile">प्रोफ़ाइल</string>
+        <string name="farm_dashboard">फार्म डैशबोर्ड</string>
+        <string name="farm_hyperlocal_weather">आपके फार्म का हाइपरलोकल मौसम एक नज़र में।</string>
+        <string name="microclimate_prediction">माइक्रोक्लाइमेट पूर्वानुमान</string>
+        <string name="ai_forecast">आपके विशिष्ट हिलसाइड स्थान के लिए AI-संचालित पूर्वानुमान</string>
+        <string name="location">स्थान</string>
+        <string name="location_placeholder">जैसे, 40.71° N, 74.00° W</string>
+        <string name="crop_type">फसल का प्रकार</string>
+        <string name="crop_placeholder">अंगूर</string>
+        <string name="get_forecast"> ✦ पूर्वानुमान प्राप्त करें</string>
+        <string name="live_data">लाइव डेटा</string>
+        <string name="temperature">तापमान</string>
+        <string name="humidity">आर्द्रता</string>
+        <string name="up_to_minute_reading">ताजा पढ़ाई</string>
+        <string name="wind">हवा</string>
+        <string name="current_weather">वर्तमान मौसम</string>
+
+
+
+</resources>
