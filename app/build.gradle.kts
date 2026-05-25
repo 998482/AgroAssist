@@ -3,6 +3,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.gms.google.services)
+
+        id ("kotlin-kapt")
+
+
+
 }
 
 android {
@@ -84,6 +89,30 @@ dependencies {
     implementation("io.coil-kt:coil:2.6.0")
     // For Jetpack Compose
     implementation("io.coil-kt:coil-compose:2.6.0")
+
+
+    implementation("androidx.activity:activity-compose:1.7.2")
+
+    dependencies {
+
+        // Room
+        implementation("androidx.room:room-runtime:2.6.1")
+        implementation ("androidx.room:room-ktx:2.6.1")
+        kapt ("androidx.room:room-compiler:2.6.1")
+
+    }
+    dependencies {
+
+        // WorkManager
+        implementation ("androidx.work:work-runtime-ktx:2.8.1")
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+
+    }
+
+
+
+
 
 
 }
