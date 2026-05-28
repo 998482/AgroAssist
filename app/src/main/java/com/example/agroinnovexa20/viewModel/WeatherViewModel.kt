@@ -1,57 +1,54 @@
+package com.example.agroinnovexa20.weather.presentation
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.agroinnovexa20.data.repository.Repository
+import com.example.agroinnovexa20.data.model.weather.Forecast
 import com.example.agroinnovexa20.data.repository.WeatherCacheRepository
-import com.example.agroinnovexa20.data.local.Room.WeatherEntity
-import kotlinx.coroutines.flow.MutableStateFlow
+import com.example.agroinnovexa20.data.repository.WeatherRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class WeatherViewModel(
-    private val remoteRepo: Repository,
-    private val cacheRepo: WeatherCacheRepository
+@HiltViewModel
+class WeatherViewModel @Inject constructor(
+    private val repo: WeatherRepository,
+    private val cache: WeatherCacheRepository
 ) : ViewModel() {
 
-    private val _weather = MutableStateFlow<WeatherEntity?>(null)
-    val weather = _weather
+    private val _weather = MutableStateFlow<Forecast?>(null)
+    val weather: StateFlow<Forecast?> = _weather
 
     private val _loading = MutableStateFlow(false)
-    val loading = _loading
+    val loading = _loading.asStateFlow()
 
     private val _error = MutableStateFlow<String?>(null)
-    val error = _error
+    val error = _error.asStateFlow()
 
     fun fetchWeather(city: String) {
         viewModelScope.launch {
             _loading.value = true
             _error.value = null
-
             try {
-                val response = remoteRepo.get_data(city)
-
-                if (response.isSuccessful) {
-                    val forecast = response.body()!!
-
-                    // ✅ SAVE TO ROOM (NO CRASH)
-                    cacheRepo.saveForecast(forecast)
-
-                    _weather.value = cacheRepo.getCachedWeather()
+                val response = repo.get_data(city)
+                if (response.isSuccessful && response.body() != null) {
+                    _weather.value = response.body()!!
                 } else {
-                    loadFromCache()
+                    loadCache()
                 }
             } catch (e: Exception) {
-                loadFromCache()
-            } finally {
-                _loading.value = false
+                loadCache()
             }
+            _loading.value = false
         }
     }
 
-    private suspend fun loadFromCache() {
-        val cached = cacheRepo.getCachedWeather()
+    private suspend fun loadCache() {
+        val cached = cache.getCached()
         if (cached != null) {
-            _weather.value = cached
+            _error.value = "Offline mode (cached data)"
         } else {
-            _error.value = "No internet & no cached data"
+            _error.value = "No internet & no cache"
         }
     }
 }

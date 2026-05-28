@@ -36,6 +36,177 @@
         <string name="wind">हवा</string>
         <string name="current_weather">वर्तमान मौसम</string>
 
+        <string name="generate">जानकारी लें</string>
+        <string name="enter_location">स्थान लिखें</string>
+        <string name="enter_crop">फसल का नाम लिखें</string>
+        <string name="my_profile">मेरी प्रोफ़ाइल</string>
+        <string name="verified_farmer">सत्यापित किसान</string>
+        <string name="logout">लॉग आउट</string>
+        <string name="fasal_salah">फसल सलाह</string>
+        <string name="aaj_ki_salah">आज की सलाह</string>
+        <string name="kyun_salah">यह सलाह क्यों?</string>
+        <string name="khaas_tip">खास टिप</string>
+        <string name="salah_suniye">सलाह सुनिए</string>
+        <string name="band_karein">बंद करें</string>
+        <string name="ai_based">AI आधारित</string>
+        <string name="loading">लोड हो रहा है...</string>
+        <string name="ai_loading">AI सलाह आ रही है...</string>
+        <string name="error_fetch">सलाह लाने में दिक्कत आई, दोबारा कोशिश करें</string>
+        <string name="offline_message">अभी इंटरनेट नहीं है। बाद में कोशिश करें।</string>
+        <string name="pehle_weather">पहले मौसम की जानकारी लें</string>
+        <string name="home">घर</string>
+
+        <string name="salah">सलाह</string>
+        <string name="ghar">घर</string>
+
+
+        <string name="app_tagline">आपके खेत का सच्चा साथी</string>
+
+
+
+        <!-- Home Screen -->
+        <string name="home_title">मेरा खेत</string>
+        <string name="home_input_title">अपने खेत के बारे में बताओ</string>
+        <string name="location_hint">आपका गाँव या शहर</string>
+        <string name="crop_hint">आपकी फसल का नाम</string>
+        <string name="btn_get_weather">मौसम देखो</string>
+        <string name="mic_location">बोलकर जगह बताओ</string>
+        <string name="mic_crop">बोलकर फसल बताओ</string>
+
+        <!-- Weather Section -->
+        <string name="label_temp">गर्मी</string>
+        <string name="label_humidity">नमी</string>
+        <string name="label_wind">हवा</string>
+        <string name="label_rain">बारिश</string>
+        <string name="label_visibility">साफ आसमान</string>
+        <string name="btn_view_advice">फसल सलाह देखो</string>
+
+        <!-- Advisory Screen -->
+        <string name="advisory_title">फसल सलाह</string>
+        <string name="advisory_loading">सलाह आ रही है...</string>
+        <string name="advisory_stat_temp">गर्मी</string>
+        <string name="advisory_stat_humidity">नमी</string>
+        <string name="advisory_card_advice">आज क्या करें</string>
+        <string name="advisory_card_reason">यह सलाह क्यों?</string>
+        <string name="advisory_card_tip">खास टिप</string>
+        <string name="btn_speak">सलाह सुनो</string>
+        <string name="btn_stop">बंद करो</string>
+        <string name="label_ai_based">AI से मिली सलाह</string>
+        <string name="label_rule_based">सामान्य सलाह</string>
+
+        <!-- Fallback -->
+        <string name="fallback_title">पहले मौसम देखो</string>
+        <string name="fallback_body">घर की स्क्रीन पर जाओ, गाँव और फसल का नाम लिखो, फिर \'मौसम देखो\' दबाओ। उसके बाद यहाँ आओ।</string>
+
+        <!-- Error -->
+        <string name="error_retry">दोबारा कोशिश करो</string>
+
+        <!-- Nav -->
+        <string name="nav_home">घर</string>
+        <string name="nav_advice">सलाह</string>
+        <string name="nav_profile">मेरी जानकारी</string>
+        <string name="nav_back">वापस जाओ</string>
+
+        <!-- Risk levels -->
+        <string name="risk_low">कम खतरा</string>
+        <string name="risk_medium">थोड़ा खतरा</string>
+        <string name="risk_high">ज़्यादा खतरा</string>
+
+        <!-- Language switcher -->
+        <string name="lang_english">English</string>
+        <string name="lang_hindi">हिंदी</string>
+
+        <string name="profile_title">मेरी प्रोफाइल</string>
+        <string name="profile_verified">सत्यापित किसान</string>
+        <string name="profile_default_name">किसान</string>
+        <string name="profile_not_logged_in">लॉगिन नहीं हुआ</string>
+
+        <string name="profile_stat_crops">फसलें</string>
+        <string name="profile_stat_reports">रिपोर्ट</string>
+        <string name="profile_stat_months">महीने</string>
+
+        <string name="profile_section_account">खाता</string>
+        <string name="profile_section_app">ऐप सेटिंग</string>
+        <string name="profile_section_support">मदद</string>
+
+        <string name="profile_personal_info">निजी जानकारी</string>
+        <string name="profile_personal_info_sub">नाम, फोन नंबर</string>
+        <string name="profile_change_password">पासवर्ड बदलें</string>
+        <string name="profile_change_password_sub">सुरक्षा अपडेट करें</string>
+        <string name="profile_my_farm">मेरा खेत</string>
+        <string name="profile_my_farm_sub">जगह और क्षेत्र</string>
+
+        <string name="profile_language">भाषा</string>
+        <string name="profile_notifications">सूचनाएं</string>
+        <string name="profile_notifications_sub">अलर्ट देखें</string>
+        <string name="profile_about">ऐप के बारे में</string>
+
+        <string name="profile_help">सहायता</string>
+        <string name="profile_help_sub">सवाल और जवाब</string>
+        <string name="profile_rate">ऐप रेट करें</string>
+        <string name="profile_rate_sub">Play Store पर रेटिंग दें</string>
+
+        <string name="profile_logout">लॉग आउट</string>
+
+        <string name="edit_profile_title">जानकारी बदलें</string>
+        <string name="edit_name_hint">नाम</string>
+        <string name="edit_phone_hint">फोन</string>
+        <string name="edit_gender_hint">लिंग</string>
+        <string name="edit_farm_hint">खेत की जगह</string>
+        <string name="edit_save">सेव करें</string>
+        <string name="edit_cancel">रद्द करें</string>
+        <string name="edit_saved_msg">प्रोफाइल सेव हो गई!</string>
+        <string name="edit_photo">फोटो बदलें</string>
+
+        <string name="gender_male">पुरुष</string>
+        <string name="gender_female">महिला</string>
+        <string name="gender_other">अन्य</string>
+    <string name="password_new">नया पासवर्ड</string>
+    <string name="password_confirm">पासवर्ड दोबारा लिखें</string>
+
+        <string name="account">खाता</string>
+        <string name="app_settings">ऐप सेटिंग</string>
+        <string name="support">सहायता</string>
+        <string name="personal_info">व्यक्तिगत जानकारी</string>
+        <string name="personal_info_sub">नाम, फोन नंबर</string>
+        <string name="change_password">पासवर्ड बदलें</string>
+        <string name="change_password_sub">सुरक्षा अपडेट करें</string>
+        <string name="my_farm">मेरा खेत</string>
+        <string name="my_farm_sub">जगह और क्षेत्र</string>
+        <string name="language">भाषा</string>
+        <string name="notifications">सूचनाएं</string>
+        <string name="notifications_sub">अलर्ट प्रबंधित करें</string>
+        <string name="about_app">ऐप के बारे में</string>
+        <string name="help_center">सहायता केंद्र</string>
+        <string name="help_center_sub">सवाल और जवाब</string>
+        <string name="rate_app">ऐप रेट करें</string>
+        <string name="rate_app_sub">Play Store पर रेटिंग दें</string>
+        <string name="crops">फसलें</string>
+        <string name="reports">रिपोर्ट</string>
+        <string name="months">महीने</string>
+        <string name="not_logged_in">लॉगिन नहीं हुआ</string>
+        <string name="farmer">किसान</string>
+        <string name="offline_msg">इंटरनेट नहीं है। बाद में कोशिश करें।</string>
+    <!-- Splash Screen -->
+    <string name="splash_app_name">एग्रोअसिस्ट</string>
+    <string name="splash_tagline">आपके खेत का सच्चा साथी</string>
+    <string name="splash_loading">ऐप खुल रही है...</string>
+    <string name="splash_version">v2.0  •  किसान के लिए</string>
+    <string name="password_min_length">कम से कम 6 अक्षर चाहिए</string>
+    <string name="password_no_match">पासवर्ड मेल नहीं खाते</string>
+    <string name="input_section_title">अपना खेत बताओ</string>
+    <string name="stat_humidity">नमी</string>
+    <string name="stat_wind">हवा</string>
+    <string name="stat_rain">बारिश</string>
+    <string name="stat_rain_tomorrow">कल</string>
+    <string name="stat_visibility">दृश्यता</string>
+    <string name="fasal_salah_dekho">फसल सलाह देखो →</string>
+
+
+
+
+
+
 
 
 </resources>

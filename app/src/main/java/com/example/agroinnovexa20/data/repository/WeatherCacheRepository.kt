@@ -1,29 +1,30 @@
 package com.example.agroinnovexa20.data.repository
 
 import android.content.Context
-import com.example.agroinnovexa.ui.theme.Model.Forecast
 import com.example.agroinnovexa20.data.local.Room.DatabaseProvider
 import com.example.agroinnovexa20.data.local.Room.WeatherEntity
+import com.example.agroinnovexa20.data.model.weather.Forecast
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class WeatherCacheRepository(context: Context) {
+@Singleton
+class WeatherCacheRepository @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
+    private val dao = DatabaseProvider.getDatabase(context).weatherDao()
 
-    private val db = DatabaseProvider.getDatabase(context)
-    private val weatherDao = db.weatherDao()
-
-    // ✅ API → Room (manual mapping happens HERE)
     suspend fun saveForecast(forecast: Forecast) {
-
-        val entity = WeatherEntity(
-            temperature = forecast.current.temp_c,
-            humidity = forecast.current.humidity,
-            timestamp = System.currentTimeMillis()
+        dao.insert(
+            WeatherEntity(
+                temperature = forecast.current.temp_c,
+                humidity = forecast.current.humidity,
+                timestamp = System.currentTimeMillis()
+            )
         )
-
-        weatherDao.insert(entity)
     }
 
-    // ✅ Room → advisory/UI
-    suspend fun getCachedWeather(): WeatherEntity? {
-        return weatherDao.getLatest()
+    suspend fun getCached(): WeatherEntity? {
+        return dao.getLatest()
     }
 }

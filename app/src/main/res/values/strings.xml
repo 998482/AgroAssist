@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AgroInnovexa2.0</string>
+
     <string name="welcome_back">Welcome Back!</string>
     <string name="login_continue">Log in to continue</string>
     <string name="email">Email</string>
@@ -17,9 +17,7 @@
     <string name="already_account">Already have an account Login</string>
     <string name="signup_success">Signup Successful Profile created</string>
 
-        <string name="hillside_weather_forecast">Hillside Weather Forecast</string>
-        <string name="profile">Profile</string>
-        <string name="farm_dashboard">Farm Dashboard</string>
+
         <string name="farm_hyperlocal_weather">Your farms hyperlocal weather at a glance.</string>
         <string name="microclimate_prediction">Microclimate Prediction</string>
         <string name="ai_forecast">AI-powered forecast for your specific hillside location</string>
@@ -34,6 +32,184 @@
         <string name="up_to_minute_reading">Up-to-minute reading</string>
         <string name="wind">Wind</string>
         <string name="current_weather">Current Weather</string>
+
+
+        <string name="hillside_weather_forecast">Weather Forecast</string>
+        <string name="farm_dashboard">Farm Dashboard</string>
+        <string name="generate">Generate</string>
+        <string name="enter_location">Enter location</string>
+        <string name="enter_crop">Enter crop name</string>
+        <string name="my_profile">My Profile</string>
+        <string name="verified_farmer">Verified Farmer</string>
+        <string name="logout">Log Out</string>
+        <string name="fasal_salah">Crop Advisory</string>
+        <string name="aaj_ki_salah">Today\'s Advisory</string>
+        <string name="kyun_salah">Why this advisory?</string>
+        <string name="khaas_tip">Special Tip</string>
+        <string name="salah_suniye">Listen to Advisory</string>
+        <string name="band_karein">Stop</string>
+        <string name="ai_based">AI Based</string>
+        <string name="loading">Loading...</string>
+        <string name="ai_loading">AI advisory loading...</string>
+        <string name="error_fetch">Could not fetch advisory, please try again</string>
+        <string name="offline_message">No internet. Please try again later.</string>
+        <string name="pehle_weather">Please fetch weather first</string>
+        <string name="home">Home</string>
+        <string name="profile">Profile</string>
+        <string name="salah">Advisory</string>
+        <string name="ghar">Home</string>
+
+
+        <!-- App -->
+
+        <string name="app_tagline">Your farm\'s true friend</string>
+
+
+        <!-- Home Screen -->
+        <string name="home_title">My Farm</string>
+        <string name="home_input_title">Tell us about your farm</string>
+        <string name="location_hint">Your village or town</string>
+        <string name="crop_hint">Your crop name</string>
+        <string name="btn_get_weather">See Weather</string>
+        <string name="mic_location">Speak your location</string>
+        <string name="mic_crop">Speak crop name</string>
+
+        <!-- Weather Section -->
+        <string name="label_temp">Heat</string>
+        <string name="label_humidity">Moisture</string>
+        <string name="label_wind">Wind</string>
+        <string name="label_rain">Rain</string>
+        <string name="label_visibility">Clear sky</string>
+        <string name="btn_view_advice">See Crop Advice</string>
+
+        <!-- Advisory Screen -->
+        <string name="advisory_title">Crop Advice</string>
+        <string name="advisory_loading">Getting your advice...</string>
+        <string name="advisory_stat_temp">Heat</string>
+        <string name="advisory_stat_humidity">Moisture</string>
+        <string name="advisory_card_advice">What to do today</string>
+        <string name="advisory_card_reason">Why this advice?</string>
+        <string name="advisory_card_tip">Special tip</string>
+        <string name="btn_speak">Hear the advice</string>
+        <string name="btn_stop">Stop</string>
+        <string name="label_ai_based">AI Based</string>
+        <string name="label_rule_based">Simple advice</string>
+
+        <!-- Fallback -->
+        <string name="fallback_title">Check weather first</string>
+        <string name="fallback_body">Go to home, write your village and crop name, then tap \'See Weather\'. Come back after that.</string>
+
+        <!-- Error -->
+        <string name="error_retry">Try again</string>
+
+        <!-- Nav -->
+        <string name="nav_home">Home</string>
+        <string name="nav_advice">Advice</string>
+        <string name="nav_profile">My Info</string>
+        <string name="nav_back">Go back</string>
+
+        <!-- Risk levels -->
+        <string name="risk_low">Low risk</string>
+        <string name="risk_medium">Some risk</string>
+        <string name="risk_high">High risk</string>
+
+        <!-- Language switcher -->
+        <string name="lang_english">English</string>
+        <string name="lang_hindi">हिंदी</string>
+
+        <string name="profile_title">My Profile</string>
+        <string name="profile_verified">Verified Farmer</string>
+        <string name="profile_default_name">Farmer</string>
+        <string name="profile_not_logged_in">Not logged in</string>
+
+        <string name="profile_stat_crops">Crops</string>
+        <string name="profile_stat_reports">Reports</string>
+        <string name="profile_stat_months">Months</string>
+
+        <string name="profile_section_account">Account</string>
+        <string name="profile_section_app">App Settings</string>
+        <string name="profile_section_support">Support</string>
+
+        <string name="profile_personal_info">Personal Info</string>
+        <string name="profile_personal_info_sub">Name, phone number</string>
+        <string name="profile_change_password">Change Password</string>
+        <string name="profile_change_password_sub">Update security</string>
+        <string name="profile_my_farm">My Farm</string>
+        <string name="profile_my_farm_sub">Location and area</string>
+
+        <string name="profile_language">Language</string>
+        <string name="profile_notifications">Notifications</string>
+        <string name="profile_notifications_sub">Manage alerts</string>
+        <string name="profile_about">About App</string>
+
+        <string name="profile_help">Help</string>
+        <string name="profile_help_sub">Questions and answers</string>
+        <string name="profile_rate">Rate the App</string>
+        <string name="profile_rate_sub">Rate on Play Store</string>
+
+        <string name="profile_logout">Log Out</string>
+
+        <string name="edit_profile_title">Update Info</string>
+        <string name="edit_name_hint">Name</string>
+        <string name="edit_phone_hint">Phone</string>
+        <string name="edit_gender_hint">Gender</string>
+        <string name="edit_farm_hint">Farm Location</string>
+        <string name="edit_save">Save</string>
+        <string name="edit_cancel">Cancel</string>
+        <string name="edit_saved_msg">Profile saved!</string>
+        <string name="edit_photo">Change Photo</string>
+
+        <string name="gender_male">Male</string>
+        <string name="gender_female">Female</string>
+        <string name="gender_other">Other</string>
+    <string name="password_new">New Password</string>
+    <string name="password_confirm">Confirm Password</string>
+
+        <string name="app_name">AgroAssist</string>
+
+
+        <string name="account">Account</string>
+        <string name="app_settings">App Settings</string>
+        <string name="support">Support</string>
+        <string name="personal_info">Personal Info</string>
+        <string name="personal_info_sub">Name, phone number</string>
+        <string name="change_password">Change Password</string>
+        <string name="change_password_sub">Update security</string>
+        <string name="my_farm">My Farm</string>
+        <string name="my_farm_sub">Location and area</string>
+        <string name="language">Language</string>
+        <string name="notifications">Notifications</string>
+        <string name="notifications_sub">Manage alerts</string>
+        <string name="about_app">About App</string>
+        <string name="help_center">Help Center</string>
+        <string name="help_center_sub">FAQs and answers</string>
+        <string name="rate_app">Rate the App</string>
+        <string name="rate_app_sub">Rate on Play Store</string>
+        <string name="crops">Crops</string>
+        <string name="reports">Reports</string>
+        <string name="months">Months</string>
+        <string name="not_logged_in">Not logged in</string>
+        <string name="farmer">Farmer</string>
+        <string name="offline_msg">No internet. Try again later.</string>
+    <!-- Splash Screen -->
+    <string name="splash_app_name">AgroAssist</string>
+    <string name="splash_tagline">Your true farm companion</string>
+    <string name="splash_loading">App is opening...</string>
+    <string name="splash_version">v2.0  •  For Farmers</string>
+    <string name="password_min_length">Min 6 characters required</string>
+    <string name="password_no_match">Passwords don\'t match</string>
+    <string name="input_section_title">Tell us about your farm</string>
+    <string name="stat_humidity">Humidity</string>
+    <string name="stat_wind">Wind</string>
+    <string name="stat_rain">Rain</string>
+    <string name="stat_rain_tomorrow">Tomorrow</string>
+    <string name="stat_visibility">Visibility</string>
+    <string name="fasal_salah_dekho">Get Crop Advisory →</string>
+
+
+
+
+
 
 
 

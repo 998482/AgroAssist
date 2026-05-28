@@ -12,19 +12,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
+import com.example.agroinnovexa20.ai.ui.AiTestScreen
 import com.example.agroinnovexa20.ui.Navigation.Nav
-import com.example.agroinnovexa20.viewModel.MyViewModel
-import com.example.agroinnovexa20.ui.theme.AgroInnovexa20Theme
 
+import com.example.agroinnovexa20.ui.theme.AgroInnovexa20Theme
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    val authViewModel : MyViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AgroInnovexa20Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                   Nav(authViewModel)
+                  Nav()
+
 
 
 
@@ -34,18 +38,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AgroInnovexa20Theme {
-        Greeting("Android")
-    }
-}

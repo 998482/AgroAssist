@@ -1,27 +1,33 @@
 package com.example.agroinnovexa20.ui.Navigation
 
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.agroinnovexa20.ui.View.CropAdvisoryScreen
-
-import com.example.agroinnovexa20.ui.View.LoginPage
-import com.example.agroinnovexa20.ui.View.PestScanScreen
-import com.example.agroinnovexa20.ui.View.ProfileScreen
-
-import com.example.agroinnovexa20.ui.View.SignUpPage
-import com.example.agroinnovexa20.ui.View.YourScreen
-import com.example.agroinnovexa20.viewModel.MyViewModel
-
+import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.agroinnovexa20.ui.View.*
+import com.example.agroinnovexa20.viewModel.AuthViewModel
+import com.example.agroinnovexa20.viewModel.HomeViewModel
+import com.example.agroinnovexa20.weather.presentation.WeatherViewModel
 
 @Composable
-fun Nav(authViewModel: MyViewModel){
+fun Nav() {
     val navController = rememberNavController()
+    val authViewModel: AuthViewModel = viewModel()
+    val weatherViewModel: WeatherViewModel = hiltViewModel()
+    val homeViewModel: HomeViewModel = viewModel() // ← ek baar yahan banao
+
     NavHost(
         navController = navController,
-        startDestination = Routes.Login.route
+        startDestination = Routes.Splash.route
     ) {
+        composable(Routes.Splash.route) {
+            SplashScreen(navController)
+        }
+
         composable(Routes.Login.route) {
             LoginPage(navController, authViewModel)
         }
@@ -31,21 +37,23 @@ fun Nav(authViewModel: MyViewModel){
         }
 
         composable(Routes.Home.route) {
-            YourScreen(authViewModel, navController)
+            HomeScreen(weatherViewModel, navController, homeViewModel)
+        }
+
+        composable(Routes.Profile.route) {
+            // selectedLocale HomeViewModel se lo
+            val selectedLocale by homeViewModel.selectedLocale.collectAsState()
+            ProfileScreen(
+                navController = navController,
+                authViewModel = authViewModel,
+                selectedLocale = selectedLocale  // ← pass karo
+            )
         }
 
         composable(Routes.CropAdvisory.route) {
             CropAdvisoryScreen(navController)
         }
-        composable(Routes.Profile.route) {
-            ProfileScreen(navController)
-        }
 
-        composable(Routes.PestScan.route) {
-            PestScanScreen(navController)
-        }
 
     }
-
 }
-

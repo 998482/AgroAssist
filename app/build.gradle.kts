@@ -7,6 +7,11 @@ plugins {
         id ("kotlin-kapt")
 
 
+        id("com.google.dagger.hilt.android")
+
+
+
+
 
 }
 
@@ -109,6 +114,30 @@ dependencies {
 
 
     }
+    dependencies {
+        implementation("com.google.code.gson:gson:2.10.1")
+        implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+        implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
+        implementation ("com.google.dagger:hilt-android:2.50")
+        kapt ("com.google.dagger:hilt-compiler:2.50")
+
+        implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+        implementation ("com.google.android.gms:play-services-location:21.2.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+        implementation("io.coil-kt:coil-compose:2.6.0")          // image loading
+        implementation("com.google.firebase:firebase-storage-ktx") // photo upload
+        // Firebase BOM — versions automatically sync
+        implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+        implementation("com.google.firebase:firebase-firestore-ktx")
+        implementation("com.google.firebase:firebase-auth-ktx")
+        implementation("com.google.firebase:firebase-storage-ktx")
+        implementation("com.google.firebase:firebase-analytics-ktx")
+
+
+    }
+
 
 
 
