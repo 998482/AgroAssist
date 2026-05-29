@@ -12,4 +12,5 @@ class GetWeatherUseCase(
     suspend operator fun invoke(city: String): Response<Forecast> {
         return repository.get_data(city)
     }
+
 }

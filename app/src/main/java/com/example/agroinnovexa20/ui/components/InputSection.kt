@@ -6,6 +6,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,6 +33,8 @@ fun InputSection(
     onMicLocationClick: () -> Unit,
     onMicCropClick: () -> Unit,
     onGenerateClick: () -> Unit,
+    onGpsClick: () -> Unit,          // ← GPS button
+    isGpsLoading: Boolean = false,   // ← GPS loading state
     selectedLocale: String = "en"
 ) {
     val context = LocalContext.current
@@ -45,6 +48,7 @@ fun InputSection(
             color = GreenPrimary
         )
 
+        // ── Location field + GPS button + Mic ─────────────────
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -63,6 +67,31 @@ fun InputSection(
                 ),
                 singleLine = true
             )
+
+            // GPS button
+            IconButton(
+                onClick = onGpsClick,
+                modifier = Modifier
+                    .size(48.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFF27500A))
+            ) {
+                if (isGpsLoading) {
+                    CircularProgressIndicator(
+                        color = Color.White,
+                        modifier = Modifier.size(20.dp),
+                        strokeWidth = 2.dp
+                    )
+                } else {
+                    Icon(
+                        imageVector = Icons.Default.MyLocation,
+                        contentDescription = "GPS",
+                        tint = Color.White
+                    )
+                }
+            }
+
+            // Mic button
             IconButton(
                 onClick = onMicLocationClick,
                 modifier = Modifier
@@ -78,6 +107,7 @@ fun InputSection(
             }
         }
 
+        // ── Crop field + Mic ───────────────────────────────────
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp)

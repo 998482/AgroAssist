@@ -35,6 +35,7 @@ import com.example.agroinnovexa20.ui.components.WeatherSection
 import com.example.agroinnovexa20.ui.utils.getLocalString
 import com.example.agroinnovexa20.viewModel.HomeViewModel
 import com.example.agroinnovexa20.weather.presentation.WeatherViewModel
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,6 +55,7 @@ fun HomeScreen(
     val weatherData by weatherViewModel.weather.collectAsState()
     val loading by weatherViewModel.loading.collectAsState()
     val error by weatherViewModel.error.collectAsState()
+    val scope = rememberCoroutineScope()
 
     val languages = listOf("English" to "en", "हिंदी" to "hi")
 
@@ -174,6 +176,9 @@ fun HomeScreen(
             }
 
             item {
+                val gpsLoading by homeViewModel.gpsLoading.collectAsState()
+
+// InputSection mein:
                 InputSection(
                     location = location,
                     crop = crop,
@@ -189,9 +194,25 @@ fun HomeScreen(
                     },
                     onGenerateClick = {
                         focusManager.clearFocus()
-                        weatherViewModel.fetchWeather(location)
+                        scope.launch {
+                            val query = homeViewModel.getQueryForWeather(context)
+                            weatherViewModel.fetchWeather(query)
+                        }
                     },
-                            selectedLocale = selectedLocale
+                    onGpsClick = {
+                        if (homeViewModel.hasLocationPermission(context)) {
+                            homeViewModel.fetchCurrentLocation(context)
+                        } else {
+                            locationPermissionLauncher.launch(
+                                arrayOf(
+                                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+                                    android.Manifest.permission.ACCESS_COARSE_LOCATION
+                                )
+                            )
+                        }
+                    },
+                    isGpsLoading = gpsLoading,
+                    selectedLocale = selectedLocale
                 )
             }
 
