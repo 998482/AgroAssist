@@ -46,7 +46,7 @@ fun SpeakButton(
             } else {
                 val locale = if (language == "hi") Locale("hi", "IN") else Locale.US
                 tts?.language = locale
-                tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+                tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts_id")
                 isSpeaking = true
             }
         },

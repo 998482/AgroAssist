@@ -88,12 +88,9 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
             _gpsLoading.value = false
         }
     }
-    // HomeViewModel mein yeh function REPLACE karo:
 
-    fun getQueryForWeather(): String {
-        // GPS lat,lng available hai to directly use karo
-        return _gpsLatLng.value ?: _location.value
-    }
+
+
 
     // REPLACE with yeh:
     suspend fun getQueryForWeather(context: Context): String {
