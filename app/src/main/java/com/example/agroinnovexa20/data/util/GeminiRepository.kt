@@ -1,7 +1,9 @@
 package com.example.agroinnovexa20.data.util
 
-import com.example.agroinnovexa20.data.model.advisory.CropType
-import com.example.agroinnovexa20.data.model.advisory.getCropAdvisory
+import com.example.agroinnovexa20.BuildConfig
+
+
+
 import com.example.agroinnovexa20.domain.aimodel.CropAdvisoryResult
 import com.google.ai.client.generativeai.GenerativeModel
 import org.json.JSONObject
@@ -10,7 +12,7 @@ class GeminiRepository {
 
     private val model = GenerativeModel(
         modelName = "models/gemini-2.5-flash",
-        apiKey = "AIzaSyBtTw7Mf_83LOxdIIsj2S8Y6VhqDUmjxDo"
+        apiKey =  BuildConfig.GEMINI_API_KEY
     )
 
     suspend fun getAdvisory(

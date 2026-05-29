@@ -8,8 +8,8 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.agroinnovexa20" />
-                  <option name="mobileSdkAppId" value="1:1028932771073:android:9487148779cc940d920f00" />
+                  <option name="appId" value="com.agroassist.farmer" />
+                  <option name="mobileSdkAppId" value="1:1028932771073:android:57328b516ff7f496920f00" />
                   <option name="projectId" value="agroinnovexa2-0" />
                   <option name="projectNumber" value="1028932771073" />
                 </ConnectionSetting>
