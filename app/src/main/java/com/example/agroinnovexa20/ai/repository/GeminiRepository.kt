@@ -1,5 +1,7 @@
 package com.example.agroinnovexa20.ai.repository
 
+
+import com.example.agroinnovexa20.BuildConfig
 import com.google.ai.client.generativeai.GenerativeModel
 
 class GeminiRepository {
@@ -7,7 +9,7 @@ class GeminiRepository {
     private val model =
         GenerativeModel(
             modelName = "models/gemini-2.5-flash",
-            apiKey = "AIzaSyBtTw7Mf_83LOxdIIsj2S8Y6VhqDUmjxDo"
+            apiKey = BuildConfig.GEMINI_API_KEY
         )
 
     suspend fun askGemini(

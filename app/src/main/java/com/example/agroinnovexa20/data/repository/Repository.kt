@@ -1,6 +1,8 @@
 package com.example.agroinnovexa20.data.repository
 
 import com.example.agroinnovexa20.data.model.weather.*
+import com.example.agroinnovexa20.BuildConfig
+
 import retrofit2.Response
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -48,6 +50,6 @@ class WeatherRepository @Inject constructor(
         }
     }
 }
-object apikey{
-    val apikey="d21e8af2992b400186322406252409"
+object apikey {
+    val apikey = BuildConfig.WEATHER_API_KEY
 }
