@@ -1,14 +1,16 @@
 package com.example.agroinnovexa20.ui.View
 
-import ProfileViewModel
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import com.example.agroinnovexa20.ui.utils.getLocalString
+
+import com.example.agroinnovexa20.R
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
@@ -25,7 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import com.example.agroinnovexa20.R
+
+import com.example.agroinnovexa20.viewModel.ProfileViewModel
+
+
 import com.example.agroinnovexa20.ui.Navigation.Routes
 import com.example.agroinnovexa20.ui.components.BottomNavBar
 import com.example.agroinnovexa20.viewModel.AuthViewModel
